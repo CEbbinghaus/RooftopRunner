@@ -1,0 +1,25 @@
+<html>
+<canvas id="canvas" height="0" width="0"></canvas>
+<script>
+	function getInfo() {
+		b = 16;
+		h = window.innerHeight - b;
+		w = window.innerWidth - b;
+		document.getElementById("canvas").width = w;
+		document.getElementById("canvas").height = h;
+	};
+	getInfo();
+</script>
+<script src="index.js"></script>
+<!--<script src="Sprite.js"></script>
+    <script src="Player.js"></script>-->
+<script>
+	window.setInterval(check, 1000 * 1.0 / 100);
+	function check() {
+		if(document.getElementById("canvas").width != w || document.getElementById("canvas").height != h) {
+			getInfo();
+		};
+	};
+</script>
+
+</html>
